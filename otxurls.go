@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"encoding/json"
 	"flag"
 	"fmt"
 	"io/ioutil"
@@ -9,8 +10,6 @@ import (
 	"net/http"
 	"os"
 	"time"
-
-	jsoniter "github.com/json-iterator/go"
 )
 
 type OTXResult struct {
@@ -58,7 +57,7 @@ func main() {
 				log.Fatal(err)
 			}
 			o := &OTXResult{}
-			err = jsoniter.Unmarshal(bytes, o)
+			err = json.Unmarshal(bytes, o)
 			if err != nil {
 				log.Fatalf("Could not decode json: %s\n", err)
 			}
