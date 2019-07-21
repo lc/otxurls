@@ -4,6 +4,7 @@ Fetch known URLs from AlienVault's [Open Threat Exchange](https://otx.alienvault
 ### usage:
 ```
 ▻ printf 'example.com' | otxurls
+▻ otxurls example.com
 ```
 
 ### install:
