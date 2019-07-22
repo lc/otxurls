@@ -16,3 +16,16 @@ or
 ```
 ▻ go get github.com/lc/otxurls
 ```
+
+
+### Docker
+
+Build
+```
+docker build -t otxurls .
+```
+
+Run
+```
+docker run --rm -t otxurls <url>
+```
